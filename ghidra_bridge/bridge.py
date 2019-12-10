@@ -1147,6 +1147,150 @@ class BridgedObject(object):
         # need to call str against the type, with the instance as the argument (otherwise it doesn't handle java packages/classes correctly)
         return self._bridged_get_type()._bridged_get("__str__")(self)
 
+    def __add__(self, other):
+        return self._bridged_get_type()._bridged_get("__add__")(self, other)
+
+    def __sub__(self, other):
+        return self._bridged_get_type()._bridged_get("__sub__")(self, other)
+
+    def __mul__(self, other):
+        return self._bridged_get_type()._bridged_get("__mul__")(self, other)
+
+    def __floordiv__(self, other):
+        return self._bridged_get_type()._bridged_get("__floordiv__")(self, other)
+
+    def __truediv__(self, other):
+        return self._bridged_get_type()._bridged_get("__truediv__")(self, other)
+
+    def __mod__(self, other):
+        return self._bridged_get_type()._bridged_get("__mod__")(self, other)
+
+    def __pow__(self, other):
+        return self._bridged_get_type()._bridged_get("__pow__")(self, other)
+
+    def __lshift__(self, other):
+        return self._bridged_get_type()._bridged_get("__lshift__")(self, other)
+
+    def __rshift__(self, other):
+        return self._bridged_get_type()._bridged_get("__rshift__")(self, other)
+
+    def __and__(self, other):
+        return self._bridged_get_type()._bridged_get("__and__")(self, other)
+
+    def __xor__(self, other):
+        return self._bridged_get_type()._bridged_get("__xor__")(self, other)
+
+    def __or__(self, other):
+        return self._bridged_get_type()._bridged_get("__or__")(self, other)
+
+    def __iadd__(self, other):
+        return self._bridged_get_type()._bridged_get("__iadd__")(self, other)
+
+    def __isub__(self, other):
+        return self._bridged_get_type()._bridged_get("__isub__")(self, other)
+
+    def __imul__(self, other):
+        return self._bridged_get_type()._bridged_get("__imul__")(self, other)
+
+    def __idiv__(self, other):
+        return self._bridged_get_type()._bridged_get("__idiv__")(self, other)
+
+    def __ifloordiv__(self, other):
+        return self._bridged_get_type()._bridged_get("__ifloordiv__")(self, other)
+
+    def __imod__(self, other):
+        return self._bridged_get_type()._bridged_get("__imod__")(self, other)
+
+    def __ipow__(self, other):
+        return self._bridged_get_type()._bridged_get("__ipow__")(self, other)
+
+    def __ilshift__(self, other):
+        return self._bridged_get_type()._bridged_get("__ilshift__")(self, other)
+
+    def __irshift__(self, other):
+        return self._bridged_get_type()._bridged_get("__irshift__")(self, other)
+
+    def __iand__(self, other):
+        return self._bridged_get_type()._bridged_get("__iand__")(self, other)
+
+    def __ixor__(self, other):
+        return self._bridged_get_type()._bridged_get("__ixor__")(self, other)
+
+    def __ior__(self, other):
+        return self._bridged_get_type()._bridged_get("__ior__")(self, other)
+
+    def __not__(self):
+        return self._bridged_get_type()._bridged_get("__not__")(self)
+
+    def __pos__(self):
+        return self._bridged_get_type()._bridged_get("__pos__")(self)
+
+    def __abs__(self):
+        return self._bridged_get_type()._bridged_get("__abs__")(self)
+
+    def __invert__(self):
+        return self._bridged_get_type()._bridged_get("__invert__")(self)
+
+    def __neg__(self):
+        return self._bridged_get_type()._bridged_get("__neg__")(self)
+
+    def __complex__(self):
+        return self._bridged_get_type()._bridged_get("__complex__")(self)
+
+    def __int__(self):
+        return self._bridged_get_type()._bridged_get("__int__")(self)
+
+    def __long__(self):
+        return self._bridged_get_type()._bridged_get("__long__")(self)
+
+    def __float__(self):
+        return self._bridged_get_type()._bridged_get("__float__")(self)
+
+    def __oct__(self):
+        return self._bridged_get_type()._bridged_get("__oct__")(self)
+
+    def __hex__(self):
+        return self._bridged_get_type()._bridged_get("__hex__")(self)
+
+    def __index__(self):
+        return self._bridged_get_type()._bridged_get("__index__")(self)
+
+    def __concat__(self, other):
+        return self._bridged_get_type()._bridged_get("__concat__")(self, other)
+
+    def __contains__(self, other):
+        return self._bridged_get_type()._bridged_get("__contains__")(self, other)
+
+    def __getitem__(self, i):
+        return self._bridged_get_type()._bridged_get("__getitem__")(self, i)
+
+    def __setitem__(self, i, k):
+        return self._bridged_get_type()._bridged_get("__setitem__")(self, i, k)
+
+    def __delitem__(self, other):
+        return self._bridged_get_type()._bridged_get("__delitem__")(self, other)
+
+    def __lt__(self, other):
+        return self._bridged_get_type()._bridged_get("__lt__")(self, other)
+
+    def __le__(self, other):
+        return self._bridged_get_type()._bridged_get("__le__")(self, other)
+
+    def __eq__(self, other):
+        return self._bridged_get_type()._bridged_get("__eq__")(self, other)
+
+    def __ne__(self, other):
+        return self._bridged_get_type()._bridged_get("__ne__")(self, other)
+
+    def __ge__(self, other):
+        return self._bridged_get_type()._bridged_get("__ge__")(self, other)
+
+    def __gt__(self, other):
+        return self._bridged_get_type()._bridged_get("__gt__")(self, other)
+
+    def __len__(self):
+        return self._bridged_get_type()._bridged_get("__len__")(self)
+
     def __repr__(self):
         return "<{}('{}', type={}, handle={})>".format(type(self).__name__, self._bridge_repr, self._bridge_type, self._bridge_handle)
 
